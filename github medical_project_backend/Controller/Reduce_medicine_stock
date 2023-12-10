@@ -1,0 +1,50 @@
+// const  mongoose = require('../Models/Mongoose');
+
+// const addItems = require('../Models/Add_items');
+
+
+
+// const Reduce_Medicine_Stock = async (req, res) => {
+//     let { MedicineName, ReduceMedicineStock } = req.body;
+  
+//     // Convert ReduceMedicineStock to an integer
+//     ReduceMedicineStock = parseInt(ReduceMedicineStock);
+  
+//     try {
+//       // Find the item by MedicineName
+//       const fetchOne = await addItems.findOne({
+//         where: {
+//           MedicineName: MedicineName,
+//         },
+//       });
+  
+//       if (fetchOne) {
+//         // If the item is found, update the MedicineStock
+//         const updatedStock = fetchOne.MedicineTotalStock - ReduceMedicineStock;
+//         // Update the MedicineTotalStock in the database
+//         await addItems.update(
+//           { MedicineTotalStock: updatedStock },
+//           {
+//             where: {
+//               MedicineName: MedicineName,
+//             },
+//           }
+//         );
+  
+//         // Respond with the updated item
+//         res.status(200).json({ message: 'Medicine stock reduced or updated successfully' });
+//       } else {
+//         // If the item is not found, respond with an error message
+//         res.status(404).json({ error: 'Medicine not found' });
+//       }
+//     } catch (error) {
+//       console.error('Error reducing medicine stock:', error);
+//       // Handle the error and respond with an error status code
+//       res.status(500).json({ error: 'Internal Server Error' });
+//     }
+//   };
+  
+
+// module.exports = {
+//     Reduce_Medicine_Stock
+// }
